@@ -63,3 +63,25 @@ class Calculator:
 
         self._notify_observers(calc)
         return result
+
+# ---------- Observers ----------
+
+class LoggingObserver:
+    def __init__(self, logger):
+        self.logger = logger
+
+    def update(self, calculation, history):
+        self.logger.info(
+            f"{calculation.operation} | "
+            f"{calculation.operand1}, {calculation.operand2} "
+            f"= {calculation.result}"
+        )
+
+
+class AutoSaveObserver:
+    def __init__(self, config):
+        self.config = config
+
+    def update(self, calculation, history):
+        if self.config.auto_save:
+            history.save()
