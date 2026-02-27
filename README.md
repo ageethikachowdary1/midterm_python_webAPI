@@ -231,14 +231,17 @@ python main.py
 
 ## Project Structure
 
+```
 project_root/
 ├── app/
 ├── tests/
-├── .github/workflows/
+├── .github/
+│   └── workflows/
+│       └── python-app.yml
 ├── main.py
 ├── requirements.txt
-├── README.md
-
+└── README.md
+```
 ---
 
 ## Technologies Used
