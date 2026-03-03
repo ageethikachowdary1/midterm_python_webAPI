@@ -131,6 +131,22 @@ Supported environment variables:
 
 If environment variables are not set, safe defaults are applied.
 
+## Configuration Example
+
+Create a `.env` file in the project root (optional if defaults are sufficient).
+
+Example:
+
+- CALCULATOR_LOG_DIR=logs
+- CALCULATOR_HISTORY_DIR=history
+- CALCULATOR_MAX_HISTORY_SIZE=100
+- CALCULATOR_AUTO_SAVE=true
+- CALCULATOR_PRECISION=2
+- CALCULATOR_MAX_INPUT_VALUE=1000000
+- CALCULATOR_DEFAULT_ENCODING=utf-8
+
+If environment variables are not defined, default values are automatically applied.
+
 ---
 
 ## Error Handling
